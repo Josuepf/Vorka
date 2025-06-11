@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+#menu li:hover {
+    font-weight: bold;
+}
+
+#conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+button {
+    margin: 5px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+input, select {
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Modal padrão */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e0e0e0; /* Cinza claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra externa */
+    z-index: 1000;
+    text-align: center;
+    color: #000; /* Texto preto */
+}
+
+#btn-confirmar.verde {
+    background-color: #4CAF50; /* Verde */
+}
+
+#btn-confirmar.vermelho {
+    background-color: #f44336; /* Vermelho */
+}
+
+#btn-sucesso {
+    background-color: #2196F3; /* Azul */
+}
+
+#btn-salvar-edicao {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-salvar-edicao:hover {
+    opacity: 0.9;
+}
+
+.form-linha {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-linha > select,
+.form-linha > input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Tamanhos personalizados */
+#responsavel, #novaData, #novaHora {
+    flex: 0 0 130px; /* largura fixa para nome, data e hora */
+}
+
+#novaTarefa {
+    flex: 2; /* mais espaço para a descrição */
+    min-width: 200px;
+}
+
+.form-linha > button {
+    flex: 0 0 100px;
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 42px; /* deixa o botão mais “gordinho” */
+}
+

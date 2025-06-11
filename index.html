@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <button id="btn-equipe" onclick="toggleEquipe()">Equipe</button>
+        <ul id="lista-equipe" style="display: none;">
+            <li onclick="mostrarTarefasPessoa(0)">João</li>
+            <li onclick="mostrarTarefasPessoa(1)">Maria</li>
+            <li onclick="mostrarTarefasPessoa(2)">Pedro</li>
+        </ul>
+        <hr>
+        <button onclick="mostrarConteudo('criar')">Criar Atividade</button>
+        <button onclick="mostrarConteudo('tarefas')">Tarefas Feitas</button>
+
+    </div>
+
+    <div id="conteudo">
+        <h2>Bem-vindo!</h2>
+        <p>Selecione uma pessoa para ver ou gerenciar as tarefas.</p>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div id="confirmacao" class="modal" style="display:none;">
+        <p id="confirmacao-texto"></p>
+        <button id="btn-confirmar" onclick="confirmarAcao()">Confirmar</button>
+        <button onclick="cancelarAcao()">Cancelar</button>
+    </div>
+
+    <!-- Modal de sucesso -->
+    <div id="sucesso" class="modal" style="display:none;">
+        <p id="sucesso-texto">Adicionado com sucesso!</p>
+        <button id="btn-sucesso" onclick="fecharSucesso()">OK</button>
+    </div>
+
+
+    <!-- Modal de edição -->
+<div id="edicao" class="modal" style="display:none;">
+    <p>Editar descrição:</p>
+    <input type="text" id="input-edicao">
+    <button id="btn-salvar-edicao" onclick="salvarEdicao()">Salvar</button>
+    <button onclick="cancelarEdicao()">Cancelar</button>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
